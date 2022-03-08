@@ -7,6 +7,7 @@ type Props = { cards: Card[] };
 const DisplayAllCardsPage: NextPage<Props> = ({ cards }) => {
   return (
     <div>
+      <h1>My Montessori cards</h1>
       {cards.map((card) => (
         <MontessoriCard card={card} />
       ))}
@@ -15,16 +16,12 @@ const DisplayAllCardsPage: NextPage<Props> = ({ cards }) => {
 };
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  // const res = await fetch(`https://.../data`);
-  // const cards = (await res.json()) as Card[];
-  const cards = [
-    {
-      name: "Apple",
-      imageUrl:
-        "https://images.pexels.com/photos/3573351/pexels-photo-3573351.png?auto=compress&cs=tinysrgb&h=130",
-      translations: { "it-IT": "Mela", "de-DE": "Apfel" },
-    },
-  ];
+  const res = await fetch(`http://localhost:5000/api/cards/`);
+  const responseBody = await res.json();
+  let cards: Card[] = [];
+  if (responseBody.success) {
+    cards = responseBody.data as Card[];
+  }
 
   // Pass data to the page via props
   return { props: { cards } };

@@ -22,14 +22,12 @@ const Home: NextPage = () => {
         <p></p>
         <ButtonGroup vertical>
           <Link href="/card/create">
-            <Button>Create a card </Button>
+            <Button>Create a new card </Button>
           </Link>
           <Link href="/card/all">
             <Button>Display all cards </Button>
           </Link>
-          <Link href="/card/by-category">
-            <Button>Display cards by category </Button>
-          </Link>
+          <Button>Print cards</Button>
         </ButtonGroup>
       </main>
       <footer className={styles.footer}>
