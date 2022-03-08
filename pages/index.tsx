@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
+import { Button, ButtonGroup } from "react-bootstrap";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -13,26 +13,24 @@ const Home: NextPage = () => {
           name="description"
           content="An app for displaying montessori cards"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>Welcome to Montessori cards</h1>
-
-        <p className={styles.description}>
-          Available actions:
-          <ul>
-            <li>
-              <Link href="/card/create">Create a card</Link>
-            </li>
-            <li>
-              <Link href="/card/all">Display all cards</Link>
-            </li>
-            <li>
-              <Link href="/card/by-category">Display cards by category</Link>
-            </li>
-          </ul>
-        </p>
+        <p></p>
+        <ButtonGroup vertical>
+          <Link href="/card/create">
+            <Button>Create a card </Button>
+          </Link>
+          <Link href="/card/all">
+            <Button>Display all cards </Button>
+          </Link>
+          <Link href="/card/by-category">
+            <Button>Display cards by category </Button>
+          </Link>
+        </ButtonGroup>
       </main>
       <footer className={styles.footer}>
         <a
