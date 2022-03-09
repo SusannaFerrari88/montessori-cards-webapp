@@ -16,6 +16,15 @@
   align-items: center;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons button {
+  margin-bottom: 1rem;
+}
+
 .footer {
   display: flex;
   flex: 1;

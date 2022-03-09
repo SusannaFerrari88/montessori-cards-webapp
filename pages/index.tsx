@@ -19,7 +19,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Montessori Cards Generator</h1>
-        <ButtonGroup vertical>
+        <div className={styles.buttons}>
           <Link href="/cards/create">
             <Button>Create a new card </Button>
           </Link>
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
             <Button>View all cards </Button>
           </Link>
           <Button>Print cards</Button>
-        </ButtonGroup>
+        </div>
       </main>
       <footer className={styles.footer}>
         <a

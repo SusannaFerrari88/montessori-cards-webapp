@@ -1,5 +1,4 @@
 import type { GetServerSideProps, NextPage } from "next";
-import MontessoriCard from "../../components/Card/Card";
 import type Card from "../../types/card";
 import styles from "../../styles/Home.module.css";
 import CardGrid from "../../components/CardGrid/CardGrid";
