@@ -1,5 +1,9 @@
 .card {
-  padding-right: 2rem;
+  padding: 0 2rem 2rem 0;
+}
+
+.card p {
+  overflow-x: hidden;
 }
 
 .buttons {

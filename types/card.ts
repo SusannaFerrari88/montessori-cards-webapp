@@ -2,7 +2,9 @@ type Card = {
   _id: string;
   name: string;
   imageUrl: string;
-  translations: { [language: string]: string };
+  translations: Translations;
 };
+
+export type Translations = { [language: string]: string };
 
 export default Card;

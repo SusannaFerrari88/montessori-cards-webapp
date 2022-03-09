@@ -3,15 +3,9 @@ import CardType from "../../types/card";
 import { Button, Card } from "react-bootstrap";
 import styles from "./Card.module.css";
 
-type Props = { card: CardType };
+type Props = { card: CardType; onDeleteCard: (id: string) => void };
 
-const MontessoriCard: FC<Props> = ({ card }) => {
-  const onDeleteCard = useCallback(() => {
-    fetch(`http://localhost:5000/api/cards/${card._id}`, {
-      method: "DELETE",
-    }).then((response) => console.log(response));
-  }, []);
-
+const MontessoriCard: FC<Props> = ({ card, onDeleteCard }) => {
   return (
     <div className={styles.card}>
       <Card>
@@ -28,7 +22,7 @@ const MontessoriCard: FC<Props> = ({ card }) => {
           </Card.Text>
           <div className={styles.buttons}>
             <Button variant="primary">Edit</Button>
-            <Button variant="danger" onClick={onDeleteCard}>
+            <Button variant="danger" onClick={() => onDeleteCard(card._id)}>
               Delete
             </Button>
           </div>

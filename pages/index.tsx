@@ -18,8 +18,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to Montessori cards</h1>
-        <p></p>
+        <h1 className={styles.title}>Montessori Cards Generator</h1>
         <ButtonGroup vertical>
           <Link href="/cards/create">
             <Button>Create a new card </Button>
