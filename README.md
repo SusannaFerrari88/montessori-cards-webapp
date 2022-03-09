@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Montessori Card Generator WEBAPP
+
+This is the FE service for the Montessori Card Generator APP.
 
 ## Getting Started
 
@@ -10,13 +12,31 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+In order for this webapp to work locally, you need to also clone the [Montessori card API](https://github.com/SusannaFerrari88/montessori-cards-api) repo and run it locally as well (instructions in the repo's README).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Once the BE server is running on localhost:5000, you can find the webapp at:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+[http://localhost:3000](http://localhost:3000)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Here you will see the main page where you will be able to select one of the three options:
+
+- Create a new card
+- View all existing cards
+- Print cards (WIP)
+
+When creating a new card, the [pexels API](https://www.pexels.com/api/documentation/#photos-search) is used to retrieve a picture that fits the description of the card.
+
+The user can also view all existing cards and from that page edit or deleting cards.
+
+The last functionality, print cards, is still WIP and it consists in generating a printable version of the existing Montessori cards (or a selection of these) in different formats:
+
+- Card with image and all translations
+- Card with image and only one translation
+- Card with image and then a separate card with the translation
+
+With all these different combinations it is possible to create fun games for your kids and toddlers.
+
+Enjoy!!
 
 ## Learn More
 
@@ -26,9 +46,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
