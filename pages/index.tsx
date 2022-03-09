@@ -21,11 +21,11 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>Welcome to Montessori cards</h1>
         <p></p>
         <ButtonGroup vertical>
-          <Link href="/card/create">
+          <Link href="/cards/create">
             <Button>Create a new card </Button>
           </Link>
-          <Link href="/card/all">
-            <Button>Display all cards </Button>
+          <Link href="/cards/all">
+            <Button>View all cards </Button>
           </Link>
           <Button>Print cards</Button>
         </ButtonGroup>

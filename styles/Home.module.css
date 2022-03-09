@@ -1,5 +1,9 @@
 .container {
-  padding: 0 2rem;
+  padding: 2rem;
+}
+
+.container h1 {
+  padding-bottom: 1rem;
 }
 
 .main {

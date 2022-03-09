@@ -1,16 +1,16 @@
 import type { GetServerSideProps, NextPage } from "next";
 import MontessoriCard from "../../components/Card/Card";
 import type Card from "../../types/card";
+import styles from "../../styles/Home.module.css";
+import CardGrid from "../../components/CardGrid/CardGrid";
 
 type Props = { cards: Card[] };
 
 const DisplayAllCardsPage: NextPage<Props> = ({ cards }) => {
   return (
-    <div>
+    <div className={styles.container}>
       <h1>My Montessori cards</h1>
-      {cards.map((card) => (
-        <MontessoriCard card={card} />
-      ))}
+      <CardGrid cards={cards} />
     </div>
   );
 };

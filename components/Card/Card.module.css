@@ -1,0 +1,8 @@
+.card {
+  padding-right: 2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
